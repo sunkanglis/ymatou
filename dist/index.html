@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ymatou</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<script type="text/html" id="serchlist">
+    
+</script>
+<body>
+    
+    <div id="head">
+        <div class="nar">
+            <div class="nar-fl">
+                Hi，欢迎来到洋码头！<span><a href="//seller.ymatou.com/Seller" target="_blank">我是买手</a></span>
+            </div>
+            <ul class="nar-fr">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">购物车</a></li>
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">个人中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="rightbar">
+        <ul>
+            <li>
+                <a href="#" target="_blank" title="我">
+                    <i class="me"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" title="购物车">
+                    <i class="gouwuche"></i><br>购<br>物<br>车
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" title="二维码">
+                    <i class="QRcode"></i>
+                </a>
+            </li>
+            <li class="last">
+                <a href="#" target="_blank" title="置顶">
+                    <i class="zhiding"></i><br>TOP
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="body">
+        <div class="headwrapper">
+            <div class="container">
+                    <span><a href="http://localhost:8080" target="_blank"></a></span>
+                    <form >
+                        <input class="search" type="text" placeholder="搜索您想要的商品" autocomplete="off">
+                        <div class="search-recomend">
+                            <dl>
+                                
+                            </dl>
+                        </div>
+                        <ul class="suggest">
+
+                        </ul>
+                        <button class="btn"></button>
+                    </form>
+                    <div class="appqr"></div>
+                </div>
+                <div class="menu-nav">
+                    <a class="t" href="#".title="首页"">首页</a>
+                    <a class="t" href="#".title="今日限时抢"">今日限时抢</a>
+                    <a class="t" href="#".title="洋货集"">洋货集</a>
+                    <a id="classfiy" class="t" href="#".title="分类"">分类
+                        <i></i>
+                    </a>
+                    <div class="category-wrapper">
+                        <div class="category">
+                             
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="banners">
+            <div class="container-fluid">
+                <ul class="big-images">
+                    <li>
+                        <div>
+                            <i class="btn-left"></i>
+                            <a href="#" target="_blank">
+                                <img src="http://pic1.ymatou.com/G02/M08/7A/E5/CgvUBVt_uq2AAQvbAAE47XDOiL4621_3_1_o.png">
+                            </a>
+                            <i class="btn-right"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="foot-nav">
+                <div class="inner">
+                    <span class="item">
+                        <i class="i1"></i>
+                        <span class="title">海外正品</span>
+                    </span>
+                    <span class="item">
+                        <i class="i2"></i>
+                        <span class="title">严格监管</span>
+                    </span>
+                    <span class="item">
+                        <i class="i3"></i>
+                        <span class="title">买手认证</span>
+                    </span>
+                    <span class="item">
+                        <i class="i4"></i>
+                        <span class="title">售后无忧</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mainpart">
+            <div class="container">
+                <!-- 今日限时抢 -->
+                <div class="todaybuy">
+                    <div class="buy-head">
+                        <i></i>
+                        <span>今日限时抢</span>
+                        <a href="#"> 更多<i></i></a>
+                    </div>
+                    <div class="buy-body">
+                    </div>
+                    <div class="countdown">
+                        <span class="title">
+                            <i class="clock"></i>距离结束
+                        </span>
+                        <span class="time hours">00</span>
+                        <span class="txt">:</span>
+                        <span class="time minutes">00</span>
+                        <span class="txt">:</span>
+                        <span class="time seconds">00</span>
+                    </div>
+                </div>
+                <!-- 全球必买清单 -->
+                <div class="globalbuy">
+                    <div class="buy-head">
+                        <i></i>
+                        <span>全球必买清单</span>
+                        <a href="#"> 更多<i></i></a>
+                    </div>
+                    <div class="b-body">
+                        <ul class="buy-list">
+                            <li>
+                                <div class="left">
+                                    <div class="b-fill">
+                                        <div class="fill">
+                                            你不能错过的面膜
+                                            
+                                        </div>
+                                        <div class="desc">
+                                                <span class="seller">来 自 29 位 买 手</span>
+                                                <span>46 件 商 品</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <ul>
+                                        <li>
+                                            <img src="http://pic1.ymatou.com/G02/shangou/M09/F2/FD/CgvUBFgZ0pSAPFiHAAJTPjJaLbg617_1_1_n_w_l.jpg" alt="">
+                                            <p class="name lineClamp2">可莱丝line合作款可莱丝动物面膜提亮肤色柔滑嫩肤深层滋润Clinie</p>
+                                            <p class="price"><em class="unit">¥</em>72</p>
+                                            <p class="country">
+                                                <img src="http://img.ymatou.com/app/flag/circle/Korea.png" alt="">
+                                                <span class="country-name">韩国</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="http://pic1.ymatou.com/G02/shangou/M0A/A5/06/CgvUBFot8e2AFoJpAAQSxLFaqJw347_1_1_n_w_l.jpg" alt="">
+                                            <p class="name lineClamp2">SNP动物面膜贴25ml*10片老虎熊猫水獭神龙任意组合保湿</p>
+                                            <p class="price"><em class="unit">¥</em>99</p>
+                                            <p class="country">
+                                                <img src="http://img.ymatou.com/app/flag/circle/Korea.png" alt="">
+                                                <span class="country-name">韩国</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="http://pic1.ymatou.com/G02/shangou/M06/7C/9F/CgvUBFl5iz6ACUcpAAD7XHdl4lo990_1_1_n_w_l.jpg" alt="">
+                                            <p class="name lineClamp2">MERBLISS婚纱面膜 5片装 美白保湿补水抗氧化 滋润肌肤护士面膜</p>
+                                            <p class="price"><em class="unit">¥</em>49</p>
+                                            <p class="country">
+                                                <img src="http://img.ymatou.com/app/flag/circle/Korea.png" alt="">
+                                                <span class="country-name">韩国</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="http://pic1.ymatou.com/G02/shangou/M09/F2/FD/CgvUBFgZ0pSAPFiHAAJTPjJaLbg617_1_1_n_w_l.jpg" alt="">
+                                            <p class="name lineClamp2">可莱丝line合作款可莱丝动物面膜提亮肤色柔滑嫩肤深层滋润Clinie</p>
+                                            <p class="price"><em class="unit">¥</em>45</p>
+                                            <p class="country">
+                                                <img src="http://img.ymatou.com/app/flag/circle/Korea.png" alt="">
+                                                <span class="country-name">韩国</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="buy-list">
+                                <li>
+                                    <div class="left"  style="background:url(https://s2.ymatou.com/home/6724f7cb998030a5ec2e7462a3303f6b.png)">
+                                        <div class="b-fill">
+                                            <div class="fill">
+                                                你的珠宝盒里怎么能没有潘多拉
+                                                
+                                            </div>
+                                            <div class="desc">
+                                                    <span class="seller">来 自 219 位 买 手</span>
+                                                    <span>18 件 商 品</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>
+                                                <img src="http://pic1.ymatou.com/G02/shangou/M09/F2/FD/CgvUBFgZ0pSAPFiHAAJTPjJaLbg617_1_1_n_w_l.jpg" alt="">
+                                                <p class="name lineClamp2">可莱丝line合作款可莱丝动物面膜提亮肤色柔滑嫩肤深层滋润Clinie</p>
+                                                <p class="price"><em class="unit">¥</em>72</p>
+                                                <p class="country">
+                                                    <img src="http://img.ymatou.com/app/flag/circle/Korea.png" alt="">
+                                                    <span class="country-name">韩国</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <img src="http://pic1.ymatou.com/G02/shangou/M0A/A5/06/CgvUBFot8e2AFoJpAAQSxLFaqJw347_1_1_n_w_l.jpg" alt="">
+                                                <p class="name lineClamp2">SNP动物面膜贴25ml*10片老虎熊猫水獭神龙任意组合保湿</p>
+                                                <p class="price"><em class="unit">¥</em>99</p>
+                                                <p class="country">
+                                                    <img src="http://img.ymatou.com/app/flag/circle/Korea.png" alt="">
+                                                    <span class="country-name">韩国</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <img src="http://pic1.ymatou.com/G02/shangou/M06/7C/9F/CgvUBFl5iz6ACUcpAAD7XHdl4lo990_1_1_n_w_l.jpg" alt="">
+                                                <p class="name lineClamp2">MERBLISS婚纱面膜 5片装 美白保湿补水抗氧化 滋润肌肤护士面膜</p>
+                                                <p class="price"><em class="unit">¥</em>49</p>
+                                                <p class="country">
+                                                    <img src="http://img.ymatou.com/app/flag/circle/Korea.png" alt="">
+                                                    <span class="country-name">韩国</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <img src="http://pic1.ymatou.com/G02/shangou/M09/F2/FD/CgvUBFgZ0pSAPFiHAAJTPjJaLbg617_1_1_n_w_l.jpg" alt="">
+                                                <p class="name lineClamp2">可莱丝line合作款可莱丝动物面膜提亮肤色柔滑嫩肤深层滋润Clinie</p>
+                                                <p class="price"><em class="unit">¥</em>45</p>
+                                                <p class="country">
+                                                    <img src="http://img.ymatou.com/app/flag/circle/Korea.png" alt="">
+                                                    <span class="country-name">韩国</span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+                <!-- 分类 -->
+                <div class="classfiy">
+                    <div class="buy-head">
+                        <i></i>
+                        <span>分类</span>
+                        <a href="#"> 更多<i></i></a>
+                    </div>
+                    <div class="c-body">
+                        <div class="left">
+                            <div class="l-item">
+                                <img src="http://pic1.ymatou.com/G02/M0B/EC/41/CgvUA1lk31GAIpF4AABP6TDC4vk178_247_239_o.gif" alt="">
+                                <span>大牌包包</span>
+                            </div>
+                            <div class="l-item">
+                                <img src="http://pic1.ymatou.com/G02/M0B/F3/19/CgvUBVlk3wuAHOWBAABGRlG4Cd4962_247_239_o.gif" alt="">
+                                <span>潮流服鞋</span>
+                            </div>
+                            <div class="l-item">
+                                <img src="http://pic1.ymatou.com/G02/M02/F3/2D/CgvUBVlk4Q2AbxSiAADt632ES9M636_461_486_o.gif" alt="">
+                                <span>美颜护肤</span>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div class="c-item">
+                                <div class="c-item-hd">
+                                    <h3 class="title">包治百病</h3>
+                                </div>
+                                <div class="c-item-bd">
+                                    <a href="#">
+                                        <img src="http://pc1.img.ymatou.com/G02/M03/F3/B5/CgvUBVeawm2AaKxPAACQxTbTvJQ385_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pic1.ymatou.com/G02/M02/86/E9/CgvUBVhXUzmAShFhAAB7t5emqGs794_1_1_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pic1.ymatou.com/G02/M08/4B/04/CgvUA1h90A2AdmmIAABPN7rTRKI428_1_1_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pic1.ymatou.com/G02/M04/59/9E/CgvUA1iAaF-AZfTuAABX2z6VeJM922_1_1_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pc1.img.ymatou.com/G02/M0B/F3/F5/CgvUBVeayAKASxtUAACaqlRGrsM967_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="c-item">
+                                <div class="c-item-hd">
+                                    <h3 class="title">包治百病</h3>
+                                </div>
+                                <div class="c-item-bd">
+                                    <a href="#">
+                                        <img src="http://pc1.img.ymatou.com/G02/M03/F3/B5/CgvUBVeawm2AaKxPAACQxTbTvJQ385_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pic1.ymatou.com/G02/M02/86/E9/CgvUBVhXUzmAShFhAAB7t5emqGs794_1_1_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pic1.ymatou.com/G02/M08/4B/04/CgvUA1h90A2AdmmIAABPN7rTRKI428_1_1_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pic1.ymatou.com/G02/M04/59/9E/CgvUA1iAaF-AZfTuAABX2z6VeJM922_1_1_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pc1.img.ymatou.com/G02/M0B/F3/F5/CgvUBVeayAKASxtUAACaqlRGrsM967_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="c-item">
+                                <div class="c-item-hd">
+                                    <h3 class="title">包治百病</h3>
+                                </div>
+                                <div class="c-item-bd">
+                                    <a href="#">
+                                        <img src="http://pc1.img.ymatou.com/G02/M03/F3/B5/CgvUBVeawm2AaKxPAACQxTbTvJQ385_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pic1.ymatou.com/G02/M02/86/E9/CgvUBVhXUzmAShFhAAB7t5emqGs794_1_1_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pic1.ymatou.com/G02/M08/4B/04/CgvUA1h90A2AdmmIAABPN7rTRKI428_1_1_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pic1.ymatou.com/G02/M04/59/9E/CgvUA1iAaF-AZfTuAABX2z6VeJM922_1_1_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                    <a href="#">
+                                        <img src="http://pc1.img.ymatou.com/G02/M0B/F3/F5/CgvUBVeayAKASxtUAACaqlRGrsM967_o.png" alt="">
+                                        <p>Tote包</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="t-hd">
+                                <h3 class="title">热门主题</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brandlist">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 模板字符串 -->
+    <div id="searchtemplate"></div>
+    <div id="suggesttemplate"></div>
+    <div id="categorytemplate"></div>
+    <script data-main="index.js" src="js/lib/require.js"></script>
+</body>
+</html>

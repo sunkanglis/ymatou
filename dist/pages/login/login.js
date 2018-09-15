@@ -1,0 +1,1 @@
+require(["ajaxmapping"],function(a){$.ajax({url:a.goodlist})});

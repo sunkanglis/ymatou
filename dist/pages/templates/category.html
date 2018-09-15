@@ -1,0 +1,46 @@
+<!-- 分类模板 -->
+<script type="text/html" id="category">
+    {{each list}}
+    <div class="cw-item">
+        <a href="https://www.ymatou.com/products/fc_1_16/%E6%8A%A4%E8%82%A4" title="{{$value.title}}">
+            <h3>
+                <span>{{$value.title}}
+                    <i></i>
+                </span>
+            </h3>
+            <div class="item">
+                <span>{{$value.subTitle[0]}}</span>
+                <span>{{$value.subTitle[1]}}</span>
+                <span>{{$value.subTitle[2]}}</span>
+            </div>
+            <span class="imgg">
+                <img src="{{$value.pic}}" alt="{{$value.title}}">
+            </span>
+        </a>
+    </div>
+    {{/each}}
+    <div class="cw-item">
+        <a href="#" title="商品类" style="display: block;height: 41px;width: 63px;margin: 8px auto">
+            <img src="data:image/png;base64,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" alt="">
+        </a>
+    </div>
+
+
+    <!-- <div class="cw-item">
+        <a href="https://www.ymatou.com/products/fc_1_16/%E6%8A%A4%E8%82%A4" title="护肤">
+            <h3>
+                <span>护肤
+                    <i></i>
+                </span>
+            </h3>
+            <div class="item">
+                <span>面膜</span>
+                <span>水乳</span>
+                <span>防晒隔离</span>
+            </div>
+            <span class="imgg">
+                <img src="http://pic1.ymatou.com/G02/M0B/0B/61/CgvUBFlE_l-AFtC7AAMyS71u0oU066_1_1_o.gif" alt="护肤">
+            </span>
+        </a>
+    </div> -->
+</script>
