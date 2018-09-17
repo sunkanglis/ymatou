@@ -1,0 +1,12 @@
+<!-- 猜你喜欢模板 -->
+<script type="text/html" id="guess">
+    {{each list}}
+    <li class="item">
+        <img src={{$value.MainPic}} alt="">
+        <p class="title">{{$value.Title}}</p>
+        <p class="price">
+            <i class="unit">￥</i> {{$value.MaxPrice}}
+        </p>
+    </li>
+    {{/each}}
+</script>

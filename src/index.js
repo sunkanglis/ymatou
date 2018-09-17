@@ -1,7 +1,7 @@
 //先加载config配置文件
 require(["./js/conf/config"], function() {
     //再加载各个模块
-    require(["jquery", "template", "ajaxMapping"], function($,template,urlmapping) {
+    require(["jquery", "template", "ajaxMapping","swiper"], function($,template,urlmapping,Swiper) {
     //推荐搜索ajax
     $.ajax({
       url: urlmapping.searchlist,
@@ -49,7 +49,7 @@ require(["./js/conf/config"], function() {
       $(".search-recomend").hide();
       $(".search").blur();
     });
-    $(".suggest").on("mouseover", "li", function() {
+    $(".suggest").on("mouseente", "li", function() {
       $(this)
         .css({ background: "#dedede" })
         .siblings()
@@ -104,20 +104,65 @@ require(["./js/conf/config"], function() {
         });
     });
 
-    //鼠标滑入img
-    $(".big-images li div img").on("mouseover",function(){
+    //鼠标滑入angelababay
+    $(".big-images li div").on("mouseenter",function(){
         $(".big-images li div .btn-left").css({display:"block"});
         $(".big-images li div .btn-right").css({display:"block"});
     })
-    //鼠标划出img
-    $(".big-images li div img").on("mouseout",function(){
+    //鼠标划出angelababay
+    $(".big-images li div").on("mouseleave",function(){
         $(".big-images li div .btn-left").css({display:"none"});
         $(".big-images li div .btn-right").css({display:"none"});
     })
 
+    //鼠标滑入品牌item
+    $(".item").on("mouseenter",function(){
+        $(".swiper-button-prev").show();
+        $(".swiper-button-next").show();
+    })
+    //鼠标划出品牌item
+    $(".item").on("mouseleave",function(){
+        $(".swiper-button-prev").hide();
+        $(".swiper-button-next").hide();
+    })
+
+    //品牌轮播
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+    //猜你喜欢ajax
+    function guessAjax(){
+        $.ajax({
+            url : urlmapping.guesslist,
+            dataType : "jsonp",
+            success : function(data){
+                var guesss = data.result.Products;
+                $("#guesstemplate").load("http://localhost:8080/pages/templates/guess.html",function(){
+                    var htmlstr = template("guess",{
+                        list: guesss
+                    })
+                    $(".guess-bd .list").html($(".guess-bd .list").html()+htmlstr);
+                })
+                
+            }
+        })
+    }
+    guessAjax();
     
-
-
+    $(".loadingmore").on("click",function(){
+        guessAjax();
+    })
 
   });
   //今日限时抢——倒计时
