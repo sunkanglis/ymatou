@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/pages/shopcar/shopcar.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+    <div id="head">
+    </div>
+    <div class="rightbar" id="rightbar"></div>
+    <div id="body">
+        <div class="hd">
+            <a href="#" class="logo"></a>
+            <span class="title">购物车</span>
+            <ul class="step-bar">
+                <li class="active"><em>1</em>我的购物车<i class="blackfive-icon bi-arrow"></i></li>
+                <li><em>2</em>提交订单<i class="blackfive-icon bi-arrow"></i></li>
+                <li><em>3</em>选择支付方式</li>
+            </ul>
+        </div>
+        <div class="bd">
+            <div class="total-bar"><span class="title">全部商品 <em class="num"></em></span></div>
+            <p class="tips">海外买手会根据现行国家政策要求，通过不同的物流方式分别发货，其实对你没有影响啦~</p>
+            <div class="table-title">
+                <span class="check-all hookCheckAll"><label><i class="blackfive-icon bi-checkbox hookCheckAllCheckbox"></i>全选</label></span>
+                <span class="product-info">商品信息</span>
+                <span class="price">单价(元)</span>
+                <span class="count">数量</span>
+                <span class="sum">金额(元)</span>
+                <span class="operate">操作</span>
+            </div>
+            <!-- 商品列表 -->
+            <div class="product-list-wrap">
+                <!-- 导入字符串模板 -->
+                
+            </div>
+            <!-- 结算 -->
+            <div class="account-wrap">
+                <div class="aw-l">
+                    <span class="check-all">
+                        <label><i class="blackfive-icon bi-checkbox hookCheckAllCheckbox"></i>全选
+                        </label>
+                    </span>
+                    <span class="del-checked">删除选中商品</span>
+                </div>
+                <div class="aw-r">
+                    <span class="aw-info">已选 <em class="num">0</em> 件商品，总价
+                        <span id="DiscountAmount"></span>：<em class="unit">¥</em>
+                        <em class="total">0.00</em></span>
+                    <button class="account-btn disabled" id="toSettleAccountsBtn">结算</button>
+                </div>
+            </div>
+        </div>
+        <div class="ft">
+            <div class="guess-hd">
+                <i></i>
+                <span>猜你喜欢</span>
+                <a href="#"> 更多<i></i></a>
+            </div>
+            <div class="guess-bd">
+                <ul class="list">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="foot"></div>
+    <!-- template -->
+    <div id="initheadtemplate"></div>
+    <div id="guesstemplate"></div>
+    <div id="plisttemplate"></div>
+</body>
+<script data-main="shopcar.js" src="../../js/lib/require.js"></script>
+
+</html>

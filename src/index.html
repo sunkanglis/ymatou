@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
-<script type="text/html" id="serchlist">
-    
-</script>
+
 <body>
     
     <div id="head">
@@ -21,9 +19,12 @@
                 Hi，欢迎来到洋码头！<span><a href="//seller.ymatou.com/Seller" target="_blank">我是买手</a></span>
             </div>
             <ul class="nar-fr">
-                <li><a href="#">登录</a></li>
-                <li><a href="#">注册</a></li>
-                <li><a href="#">购物车</a></li>
+                <li class="first">
+                        <a href="http://localhost:8080/pages/login/login.html">登录</a>
+                </li>
+                
+                <li><a href="http://localhost:8080/pages/register/register.html">注册</a></li>
+                <li><a href="http://localhost:8080/pages/shopcar/shopcar.html">购物车</a></li>
                 <li><a href="#">我的订单</a></li>
                 <li><a href="#">个人中心</a></li>
             </ul>
@@ -982,11 +983,12 @@
             </div>
         </div>
     </div>
-    <!-- 模板字符串 -->
+    <!-- template -->
     <div id="searchtemplate"></div>
     <div id="suggesttemplate"></div>
     <div id="categorytemplate"></div>
     <div id="guesstemplate"></div>
+    <div id="initheadtemplate"></div>
     <script data-main="index.js" src="js/lib/require.js"></script>
 </body>
 </html>

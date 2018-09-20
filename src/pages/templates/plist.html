@@ -1,0 +1,73 @@
+<script type="text/html" id="plist">
+    {{each list}}
+    <div class="product-list">
+            <div class="product-hd">     
+                <a href="javascript://#!" title="店铺正在建设中..." class="seller">
+                    <img title="买手头像" class="avatar" src="http://pic1.ymatou.com/p5img/upload/userlogo/middle/539911_4fca2a0ad80e4ba4971eb12ddd31bf59_m.png">
+                    <span class="name">宣煊妈</span>
+                </a>
+                <a href="javascript://#!" class="seller-site">
+                    <img src="http://img.ymatou.com/app/flag/circle/America.png" width="16" height="16" class="country">
+                    <span class="name">美国</span>
+                </a>
+                <a href="//www.ymatou.com/product/imyy/dialog?sellerId=539911&amp;sellerName=宣煊妈" target="_blank"
+                    class="blackfive-icon bi-seller"></a>
+                
+                <!--优惠券开始-->
+                <div class="floating-layer yhq-wrap hkCouponList" style="display:none">
+                </div>
+                <!--优惠券结束-->
+            </div>
+            <ul class="product-bd">
+                <li class="item">
+                    <span class="check"><i class="blackfive-icon bi-checkbox hookCheckbox single"></i></span>
+                    <div class="check-product-info">
+                        <dl class="product-info">
+                            <dt class="pi-img">
+                                <a href="//www.ymatou.com/Product/6c78d780-2466-49f9-99df-962a60a3a425.html"
+                                    target="_blank"><img src="{{$value.imgsrc}}"
+                                        width="80" height="80"></a>
+                            </dt>
+                            <dd class="pi-info">
+                                <p class="pi-name">
+                                    <em class="pi-type">
+                                        包邮包税
+                                    </em>
+                                    {{$value.productname}}
+                                </p>
+                                <div class="pi-attribute hookAttr" ismulti="false">
+                                    尺码:11.5<br>颜色:黑色
+                                    <div class="modify-wrap" style="display: none;">
+                                        <span class="modify"><i class="blackfive-icon bi-modify"></i>修改</span>
+                                    </div>
+                                </div>
+                                <p class="pi-icon">
+                                    <span>
+                                        <i class="logistics-icon li-xlob-zy"></i>
+                                        贝海直邮
+                                    </span>
+                                    <span><i class="logistics-icon li-tuihuo"></i>
+                                        本土退货
+                                    </span>
+                                </p>
+                            </dd>
+                            <p class="product-time hkRestTime" id="prod5ba10e123a8e4a0e54af601b" data-time="-1"></p>
+                        </dl>
+                        <div class="price">
+                            <p class="currentprice">{{$value.singleprice}}</p>
+                        </div>
+                        <div class="count">
+                            <div class="count-check hookPurchaseNum">
+                                <span class="reduce disabled" title="减少">-</span>
+                                <input type="text" readonly="readonly" value="{{$value.count}}">
+                                <span class="add" title="增加">+</span>
+                            </div>
+                        </div>
+                        <div class="sum">{{$value.sumprice}}</div>
+                        <div class="operate">删除</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    {{/each}}
+</script>

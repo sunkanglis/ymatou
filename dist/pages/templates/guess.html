@@ -2,10 +2,10 @@
 <script type="text/html" id="guess">
     {{each list}}
     <li class="item">
-        <img src={{$value.MainPic}} alt="">
+        <img src={{$value.MainPic}} alt="" proid="{{$value.ProdId}}">
         <p class="title">{{$value.Title}}</p>
         <p class="price">
-            <i class="unit">￥</i> {{$value.MaxPrice}}
+            <i class="unit">￥</i> <span>{{$value.MaxPrice}}</span>
         </p>
     </li>
     {{/each}}

@@ -1,0 +1,525 @@
+#head{
+    width: 100%;
+    background-color: #f8f8f8;
+    height: 30px;
+    border-bottom: 0;
+    margin-bottom: 30px;
+    .nar{
+        width: 1200px;
+        margin: auto;
+        .nar-fl{
+            float: left;
+            font: normal 12px/1.5 Microsoft yahei,Arial;
+            color: #666;
+            line-height: 30px;
+            span{
+                padding-left: 10px;
+                a{
+                    padding-left: 20px;
+                    color: #646464;
+                    &:hover{
+                        color: red;
+                        text-decoration: none;
+                    } 
+                }
+            }
+        }
+        .nar-fr{
+            float: right;
+            
+            li{
+                float: left;
+                line-height: 30px;
+                position: relative;
+                a{
+                    padding: 0 10px;
+                    color: #646464;
+                    &:hover{
+                        color: red;
+                        text-decoration: none;
+                    }
+                    i{
+                        display: inline-block;
+                        border-width: 3px;
+                        border-style: solid dashed dashed;
+                        border-color: #666 transparent transparent;
+                        margin: 6px 3px 0;
+                    }  
+                }
+                .quit111{
+                    width: 75px;
+                    height: 30px;
+                    border: 1px solid #ccc;
+                    position: absolute;
+                    text-align: center;
+                    border-top: none;
+                    display: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+#body{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+    .hd{
+        overflow: hidden;
+        position: relative;
+        a.logo{
+            background: url(https://s2.ymatou.com/shopping/84aee968a1da526ead19bed1f6bd63cf.png) no-repeat;
+            width: 102px;
+            height: 57px;
+            float: left;
+        }
+        span.title{
+            font-size: 20px;
+            color: #383838;
+            margin-left: 30px;
+            float: left;
+            margin-top: 20px;
+        }
+        .step-bar{
+            position: absolute;
+            right: 0;
+            top: 10px;
+            background-color: #f1f1f1;
+            height: 36px;
+            line-height: 36px;
+            margin-top: 10px;
+            width: 595px;
+            li{
+                float: left;
+                font-size: 16px;
+                color: #9b9b9b;
+                padding-left: 52px;
+                cursor: default;
+                width: 198px;
+                position: relative;
+                em{
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100%;
+                    background-color: #fff;
+                    color: #e5002d;
+                    line-height: 20px;
+                    margin-right: 6px;
+                    text-align: center;
+                }
+                i{
+                    display: inline-block;
+                    background: url(https://s2.ymatou.com/shopping/73cd521cfd6bd8c74679fda171d6514d.png)no-repeat;
+                    width: 18px;
+                    height: 36px;
+                    background-position: -166px -79px;
+                    vertical-align: middle;
+                    position: absolute;
+                    right: -18px;
+                    top: 0;
+                }
+            }
+            .active{
+                background-color: #c33;
+                color: #fff;
+                i{
+                    background-position: -186px -79px;
+                }
+            }
+        }
+    }
+    .bd{
+        margin-top: 26px;
+        .total-bar{
+            border-bottom: 1px solid #dedede;
+            text-align: left;
+            position: relative;
+            height: 29px;
+            span.title{
+                font-size: 18px;
+                color: #c33;
+                line-height: 18px;
+                padding: 0 33px 8px;
+                position: absolute;
+                bottom: 0;
+                border-bottom: 2px solid #c33;
+                font-weight: 700;
+                .total{
+                    vertical-align: middle;
+                    padding-left: 3px;
+                }
+            }
+        }
+        p.tips{
+            color: #9b9b9b;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .table-title{
+            border: 1px solid #dedede;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            margin-top: 10px;
+            span{
+                float: left;
+                color: #646464;
+            }
+            .check-all{
+                width: 120px;
+                label{
+                    i{
+                        background-image: url(https://s2.ymatou.com/shopping/73cd521cfd6bd8c74679fda171d6514d.png);
+                        background-repeat: no-repeat;
+                        width: 20px;
+                        height: 20px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        background-position: -114px -41px;
+                    }
+                }
+            }
+            .product-info {
+                width: 557px;
+            }
+            .price {
+                width: 130px;
+            }
+            .count {
+                width: 100px;
+                text-align: center;
+                margin-right: 60px;
+            }
+            .sum {
+                width: 100px;
+            }
+        }
+        .product-list-wrap{
+            .product-list{
+                .product-hd{
+                    padding: 0 10px;
+                    margin-top: 20px;
+                    position: relative;
+                    span.checkbox-w{
+                        width: 13px;
+                        display: inline-block;
+                        i{
+                            background-image: url(https://s2.ymatou.com/shopping/73cd521cfd6bd8c74679fda171d6514d.png);
+                            background-repeat: no-repeat;
+                            width: 20px;
+                            height: 20px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            background-position: -114px -41px;
+                            margin-left: 0;
+                        }
+                    }
+                    a.seller{
+                        margin-left: 7px;
+                        color: #666;
+                        margin-right: 7px;
+                        img{
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 100%;
+                        }
+                    }
+                    .blackfive-icon {
+                        background-image: url(https://s2.ymatou.com/shopping/73cd521cfd6bd8c74679fda171d6514d.png);
+                        background-repeat: no-repeat;
+                        width: 20px;
+                        height: 20px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        background-position: -20px 0;
+                        cursor: pointer;
+                        margin-left: 20px;
+                    }
+                    .bi-yhq{
+                        background-position: -100px -20px;
+                        width: 63px;
+                        cursor: pointer;
+                        margin-left: 20px;
+                    }
+                }
+                .product-bd{
+                    border: 1px solid #dedede;
+                    margin-top: 10px;
+                    position: relative;
+                    li.item{
+                        position: relative;
+                        overflow: hidden;
+                        .check{
+                            float: left;
+                            margin: 10px 0 0 10px;
+                            width: 13px;
+                            i{
+                                background-image: url(https://s2.ymatou.com/shopping/73cd521cfd6bd8c74679fda171d6514d.png);
+                                background-repeat: no-repeat;
+                                width: 20px;
+                                height: 20px;
+                                display: inline-block;
+                                vertical-align: middle;
+                                background-position: -114px -41px;
+                            }
+                        }
+                        .check-product-info {
+                            float: left;
+                            width: 1165px;
+                            margin-left: 10px;
+                            border-top: 1px solid #dedede;
+                            padding: 10px 0;
+                            position: relative;
+                            .product-info{
+                                width: 655px;
+                                float: left;
+                                .pi-img{ 
+                                    float: left;
+                                    position: relative;
+                                    border: 1px solid #cecece;
+                                }
+                                .pi-info{
+                                    margin-left: 100px;
+                                    position: relative;
+                                    height: 80px;
+                                    .pi-name{
+                                        float: left;
+                                        width: 255px;
+                                        em{
+                                            border: 1px solid #c33;
+                                            border-radius: 3px;
+                                            color: #c33;
+                                            font-size: 10px;
+                                            padding: 0 3px;
+                                            margin-right: 3px;
+                                        }
+                                    }
+                                    .pi-attribute {
+                                        float: left;
+                                        margin-left: 70px;
+                                        position: relative;
+                                    }
+                                    .pi-icon{
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 0;
+                                        span{
+                                            padding-right: 15px;
+                                            .logistics-icon {
+                                                display: inline-block;
+                                                width: 17px;
+                                                height: 17px;
+                                                
+                                            }
+                                            .li-xlob-zy{
+                                                background: url(https://s2.ymatou.com/shopping/5df0ad1517ec39d755a672475e4630ef.png);
+                                                background-position: 0 -24px;
+                                                background-repeat: no-repeat;
+                                                margin-right: 5px;
+                                                vertical-align: -4px;
+                                                margin-right: 3px;
+                                            }
+                                            .li-tuihuo{
+                                                background: url(https://s2.ymatou.com/shopping/5df0ad1517ec39d755a672475e4630ef.png);
+                                                background-repeat: no-repeat;
+                                                margin-right: 5px;
+                                                vertical-align: -4px;
+                                                margin-right: 3px;
+                                                background-position: -136px -24px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .product-time{
+                                    color: #e5002d;
+                                    margin-top: 10px;
+                                    width: 100%;
+                                    float: left;
+                                }
+                            }
+                            .price{
+                                float: left;
+                                width: 130px;
+                                line-height: 18px;
+                            }
+                            .count{
+                                width: 100px;
+                                text-align: center;
+                                float: left;
+                                margin-right: 60px;
+                                .count-check{
+                                    width: 78px;
+                                    height: 28px;
+                                    border: 1px solid #cecece;
+                                    margin: 0 auto;
+                                    color: #383838;
+                                    background-color: #f1f1f1;
+                                    span{
+                                        text-align: center;
+                                        float: left;
+                                        width: 18px;
+                                        height: 28px;
+                                        line-height: 28px;
+                                        color: #cecece;
+                                        cursor: pointer;
+                                    }
+                                    input{
+                                        width: 40px;
+                                        height: 28px;
+                                        border: 1px solid #646464;
+                                        position: relative;
+                                        top: -1px;
+                                        text-align: center;
+                                        float: left;
+                                    }
+                                }
+                            }
+                            .sum{
+                                width: 100px;
+                                float: left;
+                                color: #000;
+                                font-weight: 700;
+                            }
+                            .operate{
+                                cursor: pointer;
+                                color: #646464;
+                                float: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .account-wrap{
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #dedede;
+            padding-left: 10px;
+            margin-top: 25px;
+            .aw-l{
+                padding-right: 30px;
+                float: left;
+                .check-all{
+                    padding-right: 30px;
+                    i{
+                        background-image: url(https://s2.ymatou.com/shopping/73cd521cfd6bd8c74679fda171d6514d.png);
+                        background-repeat: no-repeat;
+                        width: 20px;
+                        height: 20px;
+                        background-position: -114px -41px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+                .del-checked{
+                    padding-right: 30px;
+                }
+            }
+            .aw-r{
+                float: right;
+                .aw-info{
+                    margin-right: 140px;
+                    .num,.unit{
+                        color: #c33;
+                        font-size: 14px;
+                    }
+                    .total{
+                        color: #c33;
+                        font-size: 20px;
+                    }
+                }
+                .account-btn{
+                    height: 50px;
+                    width: 120px;
+                    text-align: center;
+                    font-size: 20px;
+                    color: #fff;
+                    background-color: #c33;
+                    border: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background-color: #cecece;
+                }
+            }
+        }
+    }
+    .ft{
+       
+            margin-top: 40px;
+            overflow: hidden;
+            .guess-hd{
+                i{
+                    display: inline-block;
+                    background-image: url(https://s2.ymatou.com/home/ff6e07b382c6b974faa5b4cee2f0c49b.png);
+                    background-repeat: no-repeat;
+                    width: 24px;
+                    height: 24px;
+                    vertical-align: middle;
+                    background-position: -96px -30px;
+                }
+                span{
+                    vertical-align: middle;
+                    color: #383838;
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-left: 8px;
+                }
+                a{
+                    display: block;
+                    float: right;
+                    font-size: 17px;
+                    color: #646464;
+                    margin-right: 5px;
+                    text-decoration: none;
+                    i{
+                        background: url(https://s2.ymatou.com/home/ff6e07b382c6b974faa5b4cee2f0c49b.png);
+                        background-position: -192px -33px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .guess-bd{
+                overflow: hidden;
+                margin-top: 20px;
+                .list{
+                    .item{
+                        width: 232px;
+                        float: left;
+                        font-size: 14px;
+                        padding: 9px;
+                        border: 1px solid #dedede;
+                        margin: 0 8px 10px 0;
+                        cursor: pointer;
+                        img{
+                            width: 212px;
+                            height: 212px;
+                        }
+                        .title{
+                            color: #383838;
+                            margin-top: 8px;
+                            height: 42px;
+                            overflow: hidden;
+                        }
+                        .price{
+                            color: #c33;
+                            margin-top: 5px;
+                            font-weight: 700;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+           
+    }
+}
+.i-selected{
+    background-position: -134px -41px !important;
+}
+.kejiesuan{
+    color: #fff !important;
+    background-color: #c33 !important;
+}

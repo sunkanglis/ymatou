@@ -1,7 +1,7 @@
 //先加载config配置文件
 require(["./js/conf/config"], function() {
     //再加载各个模块
-    require(["jquery", "template", "ajaxMapping","swiper"], function($,template,urlmapping,Swiper) {
+    require(["jquery", "template", "ajaxMapping","swiper","cookie"], function($,template,urlmapping,Swiper,cookie) {
     //推荐搜索ajax
     $.ajax({
       url: urlmapping.searchlist,
@@ -142,9 +142,10 @@ require(["./js/conf/config"], function() {
       });
 
     //猜你喜欢ajax
+    var start = 1;
     function guessAjax(){
         $.ajax({
-            url : urlmapping.guesslist,
+            url : urlmapping.guesslist + "?pageIndex="+start,
             dataType : "jsonp",
             success : function(data){
                 var guesss = data.result.Products;
@@ -159,9 +160,57 @@ require(["./js/conf/config"], function() {
         })
     }
     guessAjax();
-    
+    //加载更多
     $(".loadingmore").on("click",function(){
+        start++;
         guessAjax();
+    })
+
+    //初始化头部
+    function inithead(){
+        var flag;
+        if($.cookie("flag") != "" && $.cookie("flag") !=undefined ){
+            flag = true;
+            var username = JSON.parse($.cookie("user")).username;
+        }else {
+            flag = false;
+        }
+        $("#initheadtemplate").load("http://localhost:8080/pages/templates/inithead.html",function(){
+        var htmlstr = template("inithead",{
+            judge : flag,
+            name : username
+        });
+        $("#head .nar .nar-fr .first").html(htmlstr);
+    })
+    }
+    inithead();
+    
+
+
+    //头部退出
+    $(".nar-fr .first").on("mouseenter",function(){
+        $(".quit111").show();
+    })
+    $(".nar-fr .first").on("mouseleave",function(){
+        $(".quit111").hide();
+    })
+    $(".nar-fr .first").on("click",".quit111",function(){
+        $.cookie('flag',""); 
+        window.location.replace("http://localhost:8080");
+    })
+
+
+    //点击图片生成一个商品详情cookie,跳转到商品详情页面
+    $(".guess .guess-bd ul").on("click","li",function(){
+        
+        var obj ={
+            "productid" : $(this).find("img").attr("proid"),
+            "imgsrc" : $(this).find("img").attr("src"),
+            "productname" : $(this).find("p.title").text(),
+            "productprice" : $(this).find("p.price").find("span").text()
+        }
+        $.cookie("details",JSON.stringify(obj),{path:'/'});
+        window.location.replace("http://localhost:8080/pages/details/details.html");
     })
 
   });

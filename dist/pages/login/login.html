@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洋码头-登录</title>
+    <link rel="stylesheet" href="../../css/pages/login/login.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+    <div id="head">
+        <div class="wrapper">
+            <div class="left"></div>
+            <div class="right">
+                <div class="login">
+                    <span >
+                        <a href="http://localhost:8080/pages/login/login.html" style="text-decoration: none; color: #999;">
+                            请登录</a>
+                    </span>
+                </div>
+                <div class="signin">
+                    <div class="downlist">
+                        <ul>
+                            <li class="first">买家注册</li>
+                            <li>买家注册认证</li>
+                        </ul>
+                    </div>
+                    <span >
+                        <a href="http://localhost:8080/pages/register/register.html" style="text-decoration: none; color: #999;">
+                            快速注册</a>
+                         <i></i>
+                    </span>
+                    
+                </div>
+                <div class="my">
+                    <span >我的码头 <i></i></span>
+                    <div class="downlist" style="display:none">
+                        <ul>
+                            <li class="first">我的订单</li>
+                            <li>我的优惠券</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <div class="wrapper">
+            <div class="img"></div>
+            <div class="f">
+                <h3>洋码头账户登录  |<a href="#"> 免费注册</a></h3>
+                <div class="container">
+                    <div class="inputs">
+                        <form>
+                            <div class="input">
+                                手机/邮箱：
+                                <input type="text" placeholder="请输入手机/邮箱/用户名">
+                            </div>
+                            <div class="input">
+                                    &nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;：
+                                <input type="text" placeholder="请输入密码">
+                            </div>
+                            <div class="input">
+                                验 &nbsp;证 &nbsp;码：
+                                <input class="CAPTCHA" type="text" placeholder="验证码">
+                                <img src="http://d.mizhe.com/checkcode/show2.html" alt="">
+                                <span class="change">&nbsp;换一张</span>
+                            </div>
+                            <div class="input">
+                                <input id="rember" type="checkbox" style="vertical-align: middle;"> 
+                                <label class="two">两周内自动登录</label>
+                            </div>
+                            <div class="input">
+                                <input id="login" type="button" value="登 录" style="vertical-align: middle;"> 
+                                <span class="two">忘记密码</span>
+                            </div>
+                        </form>
+                        <div class="line"></div>
+                        <ul class="third">
+                            <li class="sina">
+                                <a href="https://api.weibo.com/oauth2/authorize?client_id=4144310083&response_type=code&redirect_uri=https://www.ymatou.com/login/Sina/LoginCallBack&forcelogin=true">
+                                    <i></i>微博登录 |
+                                </a>
+                            </li>
+                            <li class="zhifubao">
+                                <a href="https://api.weibo.com/oauth2/authorize?client_id=4144310083&response_type=code&redirect_uri=https://www.ymatou.com/login/Sina/LoginCallBack&forcelogin=true" style="width:112px;">
+                                    <i></i>支付宝账户登录 |
+                                </a>
+                            </li>
+                            <li class="wechat">
+                                <a href="https://api.weibo.com/oauth2/authorize?client_id=4144310083&response_type=code&redirect_uri=https://www.ymatou.com/login/Sina/LoginCallBack&forcelogin=true">
+                                    <i></i>微信登录
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="foot">
+        
+    </div>
+</body>
+<script data-main="login.js" src="../../js/lib/require.js"></script>
+</html>

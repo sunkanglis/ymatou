@@ -1,0 +1,181 @@
+<script type="text/html" id="initdetails">
+    <div class="top-nav">
+            <a href="http://localhost:8080" target="_blank">首页</a>
+            <em class="split">></em>
+            <span class="product-name"><%=obj.productname%></span>
+        </div>
+        <div class="middle-details">
+            <!-- 左侧图片 -->
+            <div class="left">
+                <!-- 放大镜开始 -->
+                <div class="big-img">
+                    <img src="<%=obj.imgsrc%>" proid="<%=obj.productid%>"alt="">
+                    <span class="move"></span>
+                    <span class="shade"></span>
+                </div>
+                <div class="bimg">
+                    <img src="<%=obj.imgsrc%>"/>
+                </div>
+                <!-- 放大镜结束 -->
+                <div class="small-img">
+                    <div class="l-btn">
+                        <i></i>
+                    </div>
+                    <div class="imgmenu">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="http://pic1.ymatou.com/G02/shangou/M02/23/BC/CgvUA1s8Y1uASDrJAAKwLVltycg927_1_1_n_w_i.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="http://pic1.ymatou.com/G02/shangou/M02/23/BC/CgvUA1s8Y1uAeWOVAAQMulUIU4o270_1_1_n_w_i.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="r-btn">
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 中间购买商品信息 -->
+            <div class="center">
+                <div class="c-hd">
+                    <h3><%=obj.productname%></h3>
+                </div>
+                <div class="c-bd">
+                    <div class="price-panel">
+                        <p> <span>价格：</span> ￥<%=obj.productprice%></p>
+                    </div>
+                    <div class="delivery-panel">
+                        <dl>
+                            <dt>配送方式：</dt>
+                            <dd>贝海直邮</dd>
+                        </dl>
+                        <dl>
+                            <dt>运费：</dt>
+                            <dd>买手承担</dd>
+                        </dl>
+                        <dl>
+                            <dt>关税：</dt>
+                            <dd>买手承担</dd>
+                        </dl>
+                    </div>
+                    <div class="select-panel">
+                        <div class="select-property">
+                            <div class="select-item">
+
+                            </div>
+                        </div>
+                        <!-- 数量选择 -->
+                        <dl>
+                            <dt>数量：</dt>
+                            <dd>
+                                <span class="amount">
+                                    <span class="reduce">
+                                        <i></i>
+                                    </span>
+                                    <input type="text" value="1">
+                                    <span class="add">
+                                        <i></i>
+                                    </span>
+                                </span>
+                                <span class="unit">件</span>
+                                <span class="stack">剩余库存：12件</span>
+                            </dd>
+                        </dl>
+                        <!-- 提交按钮 -->
+                        <div class="action">
+                            <div class="buy">
+                                <span class="title">立即购买</span>
+                                <span class="code">
+                                    <i></i>
+                                    <em>扫码</em>
+                                </span>
+                                <div class="scan-code">
+                                    <img src="https://www.ymatou.com/misc/api/qrcode?url=http%3A%2F%2Fm.ymatou.com%2Fitem%2Fpage%2Findex%2Fbe4b2b49-d86b-4f78-8307-e0d1f9c56858%3Ftitle%3D%E5%95%86%E5%93%81%E8%AF%A6%E6%83%85%26utm_source%3Dpc%26utm_medium%3Dsmgm%26utm_campaign%3Ddanpinye" alt="">
+                                    <p>使用手机微信或者其他软件扫码购买</p>
+                                </div>
+                            </div>
+                            <div class="basket">
+                                <i></i>
+                                加入购物车
+                            </div>
+                            <span class="collect">
+                                <i></i>
+                                收藏商品
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-ft">
+                    <dl>
+                        <dt>支付：</dt>
+                        <dd>
+                            <span>
+                                <i class="zhifubao"></i>
+                                支付宝支付
+                            </span>
+                            <span>
+                                <i class="wechat"></i>
+                                微信支付
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>服务：</dt>
+                        <dd>
+                            <span>
+                                <i class="pei"></i>
+                                假一赔十
+                            </span>
+                            <span>
+                                <i class="tu"></i>
+                                本土退货
+                            </span>
+                            <span>
+                                <i class="bu"></i>
+                                不支持七天无理由退货
+                            </span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- 右侧商家信息 -->
+            <div class="right">
+                <div class="r-hd">
+                    <a href="#" title="悉尼坏爸B">
+                        <img src="http://pic1.ymatou.com/G02/M01/80/45/CgvUA1j4vOGAAAUzAADpOb1H7rM961_1_1_o.jpg" alt="">
+                        <p>悉尼坏爸B</p>
+                    </a>
+                    <p class="dsr">
+                        活跃
+                    <span class="high-score">4.7</span>
+                    </p>
+                    <p class="address"><i class="seller-icon si-site"></i>澳大利亚</p>
+                    <p class="fans">粉丝<em class="number">2666</em></p>
+                    <p class="info"></p>
+                </div>
+                <div class="r-bd">
+                    <div class="total-score">
+                        <p class="title">综合评分</p>
+                        <p class="high-score">4.7</p>
+                        <p class="desc">
+                            <i style="color:#cc3333">(高平均6%)</i>
+                        </p>
+                    </div>
+                    <div class="item-score">
+                        <p>物流服务<span class="high-score">4.6</span></p>
+                        <p>客户服务<span class="high-score">4.8</span></p>
+                        <p>买家评分<span class="high-score">4.8</span></p>
+                    </div>
+                </div>
+                <div class="r-ft">
+                    <a href="#"><i class="maishou"></i>联系买手</a>
+                    <a href="#"><i class="guanzhu"></i>关注</a>
+                </div>
+            </div>
+        </div>
+</script>
