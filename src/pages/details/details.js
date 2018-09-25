@@ -5,16 +5,16 @@ require(["../../js/conf/config"],function(){
         //导入头部
         $("#head").load("http://localhost:8080/pages/templates/head.html",function(){
              //头部退出
-        $(".nar-fr .first").on("mouseenter",function(){
-            $(".quit111").show();
-        })
-        $(".nar-fr .first").on("mouseleave",function(){
-            $(".quit111").hide();
-        })
-        $(".nar-fr .first").on("click",".quit111",function(){
-            $.cookie('flag',""); 
-            window.location.replace("http://localhost:8080");
-        })
+            $(".nar-fr .first").on("mouseenter",function(){
+                $(".quit111").show();
+            })
+            $(".nar-fr .first").on("mouseleave",function(){
+                $(".quit111").hide();
+            })
+            $(".nar-fr .first").on("click",".quit111",function(){
+                $.cookie('flag',""); 
+                window.location.replace("http://localhost:8080");
+            })
         });
         //导入右部侧边栏
         $("#rightbar").load("http://localhost:8080/pages/templates/rightbar.html");

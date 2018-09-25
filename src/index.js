@@ -139,7 +139,7 @@ require(["./js/conf/config"], function() {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-      });
+    });
 
     //猜你喜欢ajax
     var start = 1;
@@ -202,7 +202,6 @@ require(["./js/conf/config"], function() {
 
     //点击图片生成一个商品详情cookie,跳转到商品详情页面
     $(".guess .guess-bd ul").on("click","li",function(){
-        
         var obj ={
             "productid" : $(this).find("img").attr("proid"),
             "imgsrc" : $(this).find("img").attr("src"),
@@ -214,17 +213,75 @@ require(["./js/conf/config"], function() {
     })
 
   });
-  //今日限时抢——倒计时
-(function(){
-    setInterval(function(){
-        var data = new Date;
-        var m = 59-data.getMinutes();
-        var s = 59-data.getSeconds();
-        m1=m<10?"0"+m:m;
-        s1=s<10?"0"+s:s;
-        document.getElementsByClassName("minutes")[0].innerText=m1;
-        document.getElementsByClassName("seconds")[0].innerText=s1;
-    },1000)
-    
-})();
+
+    //今日限时抢轮播焦点图
+    var cArr=["p5","p4","p3","p2","p1"];
+	var index=0;
+	$(".buy-body .next").click(
+		function(){
+		nextimg();
+		}
+	)
+	$(".buy-body .prev").click(
+		function(){
+		previmg();
+		}
+	)
+	//上一张
+	function previmg(){
+		cArr.unshift(cArr[4]);
+		cArr.pop();
+		//i是元素的索引，从0开始
+		//e为当前处理的元素
+		//each循环，当前处理的元素移除所有的class，然后添加数组索引i的class
+		$(".buy-body li").each(function(i,e){
+			$(e).removeClass().addClass(cArr[i]);
+		})
+		index--;
+		if (index<0) {
+			index=4;
+		}
+		show();
+	}
+
+	//下一张
+	function nextimg(){
+		cArr.push(cArr[0]);
+		cArr.shift();
+		$(".buy-body li").each(function(i,e){
+			$(e).removeClass().addClass(cArr[i]);
+		})
+		index++;
+		if (index>4) {
+			index=0;
+		}
+		show();
+	}
+	//			鼠标移入box时清除定时器
+	$(".buy-body").mouseover(function(){
+        clearInterval(timer);
+        $(".buy-body .btn").show();
+	})
+
+	//			鼠标移出box时开始定时器
+	$(".buy-body").mouseleave(function(){
+        timer=setInterval(nextimg,4000);
+        $(".buy-body .btn").hide();
+	})
+
+	//			进入页面自动开始定时器
+	timer=setInterval(nextimg,4000);
+    //今日限时抢——倒计时
+    (function(){
+        setInterval(function(){
+            var data = new Date;
+            var m = 59-data.getMinutes();
+            var s = 59-data.getSeconds();
+            m1=m<10?"0"+m:m;
+            s1=s<10?"0"+s:s;
+            document.getElementsByClassName("minutes")[0].innerText=m1;
+            document.getElementsByClassName("seconds")[0].innerText=s1;
+        },1000)
+        
+    })();
 });
